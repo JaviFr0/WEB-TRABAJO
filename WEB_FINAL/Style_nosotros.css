@@ -1,0 +1,575 @@
+@import url("https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap");
+
+@keyframes scale-up-bottom {
+  0% {
+    transform: scale(0.5);
+    transform-origin: center bottom;
+  }
+  100% {
+    transform: scale(1);
+    transform-origin: center bottom;
+  }
+}
+@keyframes scaleDown {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.75);
+  }
+}
+
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes scale-down-center {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.5);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  background: linear-gradient(
+    150deg,
+    #fffaff 0%,
+    #eae1e8 16%,
+    #d6c8d1 33%,
+    #c1afba 51%,
+    #ac96a3 65%,
+    #ac96a3 100%
+  );
+  font-family: "Frankln Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+img {
+  max-width: 100%;
+  animation: scale-up-bottom 1.5s;
+}
+#menu-toggle {
+  opacity: 0;
+  display: none;
+  pointer-events: none;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  color: #eae1e8;
+}
+.logo {
+  color: #eae1e8;
+  font-size: 25px;
+  text-transform: uppercase;
+  padding-left: 20px;
+  width: 5%;
+  height: 5%;
+  animation: none;
+}
+/*Esto sirve para las listas */
+.navbar ul {
+  display: flex;
+  align-items: center;
+}
+.navbar ul li {
+  padding: 0 20px;
+  font-size: 20px;
+}
+.navbar ul li a {
+  color: #fff;
+}
+
+
+
+
+h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 100px;
+  line-height: 1;
+  color: #fff;
+  margin-bottom: 15px;
+  padding-left: 20px;
+  text-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.container {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.5em;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.logo {
+  text-align: center;
+  font-size: 3em;
+}
+
+.logo span {
+  color: #fff;
+}
+
+.contact-wrapper {
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-wrapper > * {
+  padding: 1em;
+}
+
+.contact-form {
+  background: transparent;
+}
+
+.contact-form form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px; /* Agrega espacio entre las columnas del formulario */
+}
+
+.contact-form form label {
+  display: block;
+  
+}
+
+.contact-form form p {
+  margin: 0;
+  padding: 1em;
+}
+
+.contact-form form .block {
+  grid-column: 1 / 3;
+}
+
+
+.contact-form form input,
+.contact-form form textarea {
+  font-style: italic;
+  font-family: "Arial", sans-serif;
+  width: 100%;
+  padding: 0.7em;
+  border: none;
+  background: none;
+  outline: 0;
+  color: #eae1e8;
+  border-bottom: 1px solid #eae1e8;
+  resize: none;
+  margin-bottom: 15px; /* Agrega espacio inferior entre los campos de entrada */
+}
+
+.contact-form form button {
+  background: #b70e21;
+  border: 0;
+  text-transform: uppercase;
+  padding: 1em;
+  width: 100%;
+  border-radius: 5px; /* Agrega esquinas redondeadas al botón */
+  color: #eae1e8;
+  height: 50px;
+}
+
+/* Ajusta estilos de hover y focus del botón si lo deseas */
+.contact-form form button:hover,
+.contact-form form button:focus {
+  background: #d63031;
+  color: #fff;
+  transition: background-color 1s ease-out;
+  outline: 0;
+}
+
+
+/* CONTACT INFO */
+.contact-info {
+  background: transparent;
+}
+
+.contact-info h4,
+.contact-info p {
+  text-align: center;
+  margin: 0 0 1rem 0;
+}
+.contact-info ul {
+  margin-top: 40px;
+  text-align: left;
+}
+/* LARGE SIZE */
+
+/* Sirve para dar estilo al texto de Okupas*/
+.body-content {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  flex-direction: column;
+}
+
+.body-txt {
+  flex-basis: 50%;
+  text-align: center; /* Center text */
+}
+
+.body-txt p {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 50px;
+  padding-left: 20px;
+  font-family: "bebas neue", sans-serif;
+}
+.navbar.show {
+  display: flex;
+}
+
+/* TXT MAS INFORMACION*/
+.btn {
+  display: inline-block;
+  padding: 13px 30px;
+  background: linear-gradient(90deg, #ac96a3 0%, #c1afba 100%);
+  color: #fff; /* Change text color to white */
+  font-size: 18px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  margin: 20px auto; /* Center the button and add margin */
+  text-align: center; /* Center text */
+}
+
+.navbar a {
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  padding-bottom: 5px;
+  cursor: pointer;
+  overflow: hidden;
+}
+.btn:hover,
+.btn:active {
+  background: linear-gradient(90deg, #ac96a3 0%, #c1afba 100%);
+  animation: scaleDown 1.5s forwards;
+}
+
+.body-img {
+  flex-basis: 50%;
+}
+.navbar a::before,
+.navbar a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+.navbar a::before {
+  top: 100%;
+  left: 0;
+}
+
+.navbar a::after {
+  bottom: 0;
+  right: 0;
+}
+
+.navbar a:hover::before {
+  width: 100%;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+.donation-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  margin-top: 30px;
+}
+
+.donation-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.donation-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.donation-form input,
+.donation-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+.donation-form button {
+  background: linear-gradient(90deg, #ac96a3 0%, #c1afba 100%);
+  color: #fff;
+  padding: 13px 30px;
+  font-size: 18px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.header-txt {
+  text-align: center; /* Centrar el contenido */
+  color: #fff; /* Texto blanco */
+  margin: 0 auto; /* Centrar el contenedor */
+  padding: 20px; /* Añadir margen alrededor del contenedor */
+}
+
+.header-txt p {
+  font-size: 20px; 
+  color: #fff; /* Texto blanco */
+  margin-bottom: 20px; /* Espacio inferior */
+  margin-left: 20px;
+  margin-right: 20px; /* Espacio lateral */
+  text-align: center; /* Centrar texto */
+}
+
+.donation-form {
+  display: none; 
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  margin-top: 30px;
+}
+
+.donation-form.active {
+  display: block; 
+}
+/* Estilos para el modal */
+.modal {
+  display: none; /* Oculto por defecto */
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0, 0, 0); 
+  background-color: rgba(0, 0, 0, 0.4); 
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Estilos adicionales para los elementos del formulario */
+.modal-content label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.modal-content input,
+.modal-content select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+.modal-content button {
+  background: linear-gradient(90deg, #ac96a3 0%, #c1afba 100%);
+  color: #fff;
+  padding: 13px 30px;
+  font-size: 18px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+
+
+@media (max-width: 991px) {
+  .footer-row{
+    text-align: center;
+  }
+  .footer-links{
+    width: 100px;
+    margin-bottom: 30px;
+  }
+  body {
+    padding: 0 4em;
+  }
+  .contact-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+  .contact-wrapper > * {
+    padding: 2em;
+  }
+  .contact-info h4,
+  .contact-info ul,
+  .contact-info p {
+    text-align: left;
+  }
+  .menu {
+    padding: 20px;
+    position: relative;
+  }
+  .menu label {
+    display: initial;
+  }
+  .menu .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: linear-gradient(90deg, #ac96a3 0%, #c1afba 100%);
+    display: none;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease, height 0.5s ease;
+  }
+  .menu .navbar ul {
+    flex-direction: column;
+    padding: 20px 0;
+  }
+  .menu .navbar ul li {
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  /* Click en el menu para que se despliegue*/
+  #menu-toggle:checked ~ .navbar {
+    display: initial;
+  }
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  
+  }
+
+  .body-content {
+    padding: 30px;
+    margin-top: 0;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .body-txt {
+    padding: 0 0 40px 0;
+  }
+
+  .body-img img {
+    width: 300px;
+  }
+  .navbar.active {
+    display: flex;
+  }
+
+  /* ANIMACION TRES RAYAS MENU*/
+  #menu-toggle {
+    display: flex;
+    flex-direction: column;
+    height: 3rem;
+    width: 3rem;
+    border: 0;
+    background: transparent;
+    gap: 0.65rem;
+    cursor: pointer;
+    position: relative;
+    pointer-events: all;
+    opacity: 1;
+  }
+
+  #menu-toggle > div {
+    background: WHITE;
+    height: 2px;
+    width: 100%;
+    border-radius: 5px;
+    transition: all 0.5s;
+    transform-origin: left;
+  }
+
+  #menu-toggle:hover div:first-child {
+    transform: rotate(45deg);
+  }
+
+  #menu-toggle:hover div:nth-child(2) {
+    opacity: 0;
+  }
+
+  #menu-toggle:hover div:last-child {
+    transform: rotate(-45deg);
+  }
+}
+/* Icono flotante en la esquina inferior derecha */
+.floating-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #f39c12; /* Color de fondo del icono */
+  color: white; /* Color del texto y del icono */
+  padding: 10px 15px;
+  border-radius: 50px; /* Bordes redondeados */
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.floating-icon:hover {
+  transform: scale(1.1); /* Efecto al pasar el mouse */
+}
+
+.floating-icon i {
+  margin-right: 10px; /* Espacio entre el icono y el texto */
+}
